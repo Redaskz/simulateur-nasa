@@ -1,3 +1,5 @@
+package core;
+
 // Represente un booster ajoute a la fusee pour augmenter ses capacites.
 public class Booster {
     private String nom;

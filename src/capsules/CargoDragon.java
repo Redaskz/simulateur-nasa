@@ -1,3 +1,5 @@
+package capsules;
+
 // Modele concret de la capsule Cargo Dragon.
 public class CargoDragon extends Capsule {
     public CargoDragon() {

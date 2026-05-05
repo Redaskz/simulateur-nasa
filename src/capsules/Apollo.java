@@ -1,4 +1,6 @@
 
+package capsules;
+
 // Modele concret de la capsule Apollo.
 public class Apollo extends Capsule {
     public Apollo() {

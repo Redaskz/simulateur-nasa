@@ -1,3 +1,5 @@
+package capsules;
+
 // Classe abstraite pour definir les caracteristiques communes a toutes les capsules.
 public abstract class Capsule {
     private String nom;

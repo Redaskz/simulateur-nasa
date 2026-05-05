@@ -1,3 +1,5 @@
+package lanceurs;
+
 // Modele concret du lanceur Falcon 9.
 public class Falcon9 extends Lanceur {
     public Falcon9() {

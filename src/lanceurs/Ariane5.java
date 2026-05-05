@@ -1,3 +1,5 @@
+package lanceurs;
+
 // Modele concret du lanceur Ariane 5.
 public class Ariane5 extends Lanceur {
     public Ariane5() {
