@@ -1,0 +1,69 @@
+@startuml DiagrammeNASA
+skinparam classAttributeIconSize 0
+skinparam style strictuml
+skinparam shadowing false
+skinparam classFontSize 13
+skinparam ArrowColor #444444
+skinparam classBackgroundColor #F8F8FF
+skinparam classBorderColor #333399
+
+title Diagramme UML - Simulateur NASA
+
+' Classes abstraites
+abstract class Lanceur {
+  + {abstract} calculerPousseeMax() : double
+}
+
+abstract class Capsule {
+  + {abstract} calculerIndiceSecurite() : double
+}
+
+abstract class Mission {
+  + {abstract} getDescriptionMission() : String
+}
+
+' Héritage (enfant --> parent)
+SaturneV --> Lanceur
+SLS      --> Lanceur
+Ariane5  --> Lanceur
+Falcon9  --> Lanceur
+
+Orion      --> Capsule
+CrewDragon --> Capsule
+Apollo     --> Capsule
+CargoDragon --> Capsule
+
+OrbiteTerrestre  --> Mission
+ISSMission       --> Mission
+LuneMission      --> Mission
+MarsMission      --> Mission
+MissionPersonnelle --> Mission
+
+' Classes principales
+class Booster
+class Lancement
+class ResultatSimulation
+class CarburantInsuffisantException
+
+CarburantInsuffisantException --> Exception
+
+class Fusee {
+  + ajouterBooster() : void
+  + estCompatibleAvecMission() : boolean
+}
+
+class Simulateur {
+  + demarrer() : void
+  + simulerLancement() : ResultatSimulation
+}
+
+' Relations
+Fusee --> Lanceur  : contient
+Fusee --> Capsule  : contient
+Fusee --> Booster  : contient
+
+Simulateur --> Lancement : historique
+Simulateur --> Fusee     : crée
+Simulateur --> Mission   : utilise
+
+@enduml
