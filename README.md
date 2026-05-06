@@ -1,7 +1,5 @@
 # Simulateur NASA
 
-Projet Java console realise pour le sujet B1.
-
 ## Objectif
 
 Le programme permet de :
@@ -41,7 +39,7 @@ java -cp bin App
 Dans le code, les prix sont stockes en `MEUR`.
 Donc `1200 EUR = 0.0012 MEUR`.
 
-## Ce qui montre la POO
+## la POO
 
 - heritage : `SaturneV` est un `Lanceur`, `Orion` est une `Capsule`, etc.
 - composition : une `Fusee` a un `Lanceur`, une `Capsule` et des `Booster`
@@ -60,7 +58,3 @@ Le fichier est relu au demarrage.
 ## Mission personnelle choisie
 
 - `Station lunaire`
-
-## Remarque
-
-Le code a ete volontairement garde simple et lisible pour pouvoir etre explique facilement a l'oral.
